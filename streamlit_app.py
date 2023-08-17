@@ -38,14 +38,14 @@ else:
 except URLError as e:
   streamlit.error()
 
-streamlit.write('The user entered ', fruit_choice)
+#streamlit.write('The user entered ', fruit_choice)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)
 
 #take the json version of the response and norrmalize it
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # o/p it to the screen as table
-streamlit.dataframe(fruityvice_normalized)
+#streamlit.dataframe(fruityvice_normalized)
 
 #dont run anything past herewhile we troubleshoot
 streamlit.stop()
